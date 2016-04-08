@@ -1,0 +1,156 @@
+html, body {
+  top: 0;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body,
+input,
+textarea {
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: 12px;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+@font-face {
+  font-family: 'VertigoPlusFLF';
+  src: url(../Fonts/VertigoPlusFLF.ttf);
+}
+#svgcontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Hidden {
+  display: none;
+}
+.BackGroundColor {
+  background-color: #3e362f;
+}
+.ForeGroundColor {
+  fill: #554d47;
+}
+.AccentColor1 {
+  color: #af5b1d;
+  fill: #af5b1d;
+}
+.AccentColor2 {
+  fill: #2e2823;
+}
+.AccentColor3 {
+  fill: #cbc1b8;
+}
+.ShadeColor {
+  opacity: .26;
+  fill: #020202;
+}
+.TextTitleFont {
+  font-family: 'VertigoPlusFLF';
+}
+.TextTitleSize {
+  font-size: 200px;
+}
+.TextSubTitleSize {
+  font-size: 72px;
+}
+.TextMediumSize {
+  font-size: 36px;
+}
+.StrokeEffect {
+  stroke: #af5b1d;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#chatinput {
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  padding: 1em;
+  padding-bottom: 0;
+  background-color: #554d47;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#chatform {
+  border-top: 2px solid #af5b1d;
+}
+#sidebar {
+  position: fixed;
+  top: .5em;
+  right: .5em;
+  bottom: auto;
+  border: none;
+  background: #554d47;
+}
+#sidebar-content {
+  margin-top: 40px;
+  margin-left: 1em;
+}
+.sidebar-extra {
+  margin-right: 40px;
+}
+.settingsicon {
+  float:right;
+}
+#messages {
+  overflow-y: auto;
+  height: calc(100vh - 50px);
+  margin-bottom: 45px;
+}
+.message {
+  padding-bottom: 1em;
+}
+.nick {
+  float: left;
+  overflow: hidden;
+  width: 16em;
+  margin-right: 1em;
+  margin-left: -17em;
+  text-align: right;
+  white-space: nowrap;
+}
+.trip {
+  font-size: 10px;
+}
+.text {
+  margin: 0;
+  margin-left: 1em;
+  color: #cbc1b8;
+}
+.text p {
+  margin: 0;
+}
+input, textarea {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  resize: none;
+  color: #cbc1b8;
+  border: none;
+  outline: none;
+  background: none;
+}

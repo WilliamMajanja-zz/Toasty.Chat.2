@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ToastyChat</title>
+  <link rel="stylesheet" href="./Style/client.css">
+  <script src="./Scripts/jquery-2.2.0.min.js"></script>
+  <link rel="stylesheet" href="./Style/jquery-ui.css">
+  <script src="./Scripts/jquery-ui.min.js"></script>
+  <script src="./data.js"></script>
+  <script src="./Scripts/visual.js"></script>
+  <script src="./Scripts/client.js"></script>
+</head>
+
+<body class="BackGroundColor">
+  <div id="svgcontainer">
+    <svg class="svg" version="1.1" id="RightCorner" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 1080">
+      <polygon id="Main" class="ForeGroundColor" points="1560.3,1080 1920,1080 1920,0 686,0 " />
+      <polygon id="Shade" class="ShadeColor" points="1560.3,1080 1540.3,1080 665.5,0 686,0 " />
+      <line id="Border" class="StrokeEffect" x1="686" y1="0" x2="1560.3" y2="1080" />
+    </svg>
+    <svg class="svg" version="1.1" id="LeftCorner" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 1080">
+      <polygon id="Main" class="ForeGroundColor" points="1303,1080 0,1080 0,0 428,0 " />
+      <line id="Border" class="StrokeEffect" x1="428" y1="0" x2="1303" y2="1080" />
+    </svg>
+    <svg class="svg" version="1.1" id="Title" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+      <text transform="matrix(1 0 0 1 1523 272.5)" class="AccentColor1 TextSubTitleSize TextTitleFont">A minimalistic chat</text>
+      <text transform="matrix(1 0 0 1 1318 209.5)">
+        <tspan x="0" y="0" class="AccentColor2 TextTitleSize TextTitleFont">Toasty</tspan>
+        <tspan x="303.6" y="0" class="AccentColor1 TextTitleSize TextTitleFont">.</tspan>
+        <tspan x="328" y="0" class="AccentColor2 TextTitleSize TextTitleFont">Chat</tspan>
+      </text>
+    </svg>
+    <svg class="svg Hidden" version="1.1" id="LoginDialog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+      <rect id="Shade" x="753" y="452" class="ShadeColor" width="449" height="215.3" />
+      <rect id="Border" x="732" y="429" class="AccentColor1" width="452" height="216" />
+      <rect id="Frame" x="735" y="432" class="ForeGroundColor" width="449" height="215.3" />
+      <rect id="NickFieldBackground" x="757" y="572" class="AccentColor2" width="406" height="42" />
+      <text id="Enter_Username" transform="matrix(1 0 0 1 827 531)" class="TextSubTitleSize AccentColor2 TextTitleFont">Enter Username</text>
+      <foreignObject x="757" y="572" width="406" height="42">
+          <input id="nickinput" type="text" autocomplete="off" autofocus="" class="AccentColor1 TextTitleFont TextMediumSize" style="resize: none; overflow: hidden; width: 100%; height: 100%; text-align: center; border: none; background-color: transparent;"></textarea>
+      </foreignObject>
+    </svg>
+  </div>
+  <nav id="sidebar" class="Hidden">
+    <img src="https://toastystoemp.com/public/settingsicon.png" id="settingsicon" class="settingsicon">
+    <div id="sidebar-content" class="sidebar-extra">
+      <h4>Settings</h4>
+        <p>
+          <input id="auto-login" type="checkbox">
+          <label for="auto-login">Auto login</label>
+        </p>
+        <p>
+          <input id="joined-left" type="checkbox" checked="">
+          <label for="joined-left">Join/left notify</label>
+        </p>
+        <p>
+          <input id="leave-warning" type="checkbox" checked="">
+          <label for="leave-warning">Leave warning</label>
+        </p>
+        <p>
+          <input id="notifications" type="checkbox" checked="">
+          <label for="notifications">Notifications</label>
+        </p>
+        <p>
+          <button id="clear-messages">Clear messages</button>
+        </p>
+        <p>
+          <button id="toggle-viewer">Toggle viewer</button>
+        </p>
+        <h4>Users online</h4>
+          <p>(Click user to invite)</p>
+          <ul id="users"></ul>
+        </div>
+    </nav>
+  <div id="chat">
+    <article id="messageContainer" class="container Hidden"></article>
+    <footer id="footer" class="Hidden">
+      <div class="container">
+        <form id="chatform" class="messages">
+          <textarea id="chatinput" type="text" autocomplete="off" autofocus data-autoresize ></textarea>
+        </form>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
